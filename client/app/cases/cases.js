@@ -4,7 +4,7 @@ angular.module('fullstackApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('cases', {
-        url: '/cases',
+        url: '/travel',
         abstract: true,
         template: '<div ui-view></div>'
       })
