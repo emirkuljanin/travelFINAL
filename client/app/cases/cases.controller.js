@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('CasesCtrl', function ($scope , $state , CasesResource) {
+  .controller('CasesCtrl', function ($scope , $state , $stateParams, CasesResource) {
     $scope.message = 'Hello';
 
     CasesResource.query().$promise.then(function (response) {
