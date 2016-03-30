@@ -9,5 +9,10 @@ angular.module('fullstackApp')
             console.log(response);
             $scope.case = response;
         });
-    };
-  });
+      }
+        $scope.save = function(){
+            CasesResource.save($scope.case).$promise.then(function(response){
+                $scope.case = response;
+            });
+        };
+      });

@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 angular.module('fullstackApp')
   .config(function ($stateProvider) {
@@ -17,6 +17,10 @@ angular.module('fullstackApp')
         url: '/new',
         controller: 'CasesEditCtrl',
         templateUrl: 'app/cases/casesEdit.html'
-    });
+      }).state('cases.edit', {
+            url: '/:id',
+            controller: 'CasesEditCtrl',
+            templateUrl: 'app/cases/casesEdit.html'
+        });
 
-  });
+      });
