@@ -6,7 +6,7 @@ angular.module('fullstackApp')
         id: '@id'
     },{
         update: {
-            method: 'PUT'
+            method: 'PUT' , params: {id: '@id'}
         }
     });
 });

@@ -10,15 +10,17 @@ angular.module('fullstackApp')
         });
     }
 
-    $scope.save = function(){
-        CasesResource.save($scope.case).$promise.then(function(response){
-            console.log(response);
-            $scope.case = response;
-        });
-      }
         $scope.save = function(){
             CasesResource.save($scope.case).$promise.then(function(response){
                 $scope.case = response;
             });
         };
-      });
+      })
+      .controller('CasesUpdateCtrl', function ($scope ,$state, CasesResource, $stateParams) {
+
+        $scope.edit = function(){
+          CasesResource.update($scope.case).$promise.then(function(response){
+              $scope.case = response;
+          });
+        }
+        });
