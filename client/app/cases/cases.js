@@ -16,10 +16,10 @@ angular.module('fullstackApp')
       .state('cases.new', {
         url: '/new',
         controller: 'CasesEditCtrl',
-        templateUrl: 'app/cases/casesNew.html'
+        templateUrl: 'app/cases/casesEdit.html'
       }).state('cases.edit', {
-            url: '/:id/',
-            controller: 'CasesUpdateCtrl',
+            url: '/:id',
+            controller: 'CasesEditCtrl',
             templateUrl: 'app/cases/casesEdit.html'
         });
 
