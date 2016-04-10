@@ -24,5 +24,11 @@ angular.module('fullstackApp')
       });
       };
 
+      $scope.delete = function() {
+        CasesResource.remove({id: $scope.case._id}, function()
+        {
+        });
+      };
 
-      });
+
+});
