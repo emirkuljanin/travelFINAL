@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: DocumentCtrl', function () {
+describe('Controller: DocumentsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('fullstackApp'));
 
-  var DocumentCtrl, scope;
+  var DocumentsCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    DocumentCtrl = $controller('DocumentCtrl', {
+    DocumentsCtrl = $controller('DocumentsCtrl', {
       $scope: scope
     });
   }));

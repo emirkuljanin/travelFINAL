@@ -10,16 +10,16 @@ angular.module('fullstackApp')
       })
       .state('documents.list', {
         url: '',
-        controller: 'DocumentCtrl',
+        controller: 'DocumentsCtrl',
         templateUrl: 'app/document/document.html'
       })
       .state('documents.new', {
         url: '/new',
-        controller: 'DocumentEditCtrl',
+        controller: 'DocumentsEditCtrl',
         templateUrl: 'app/document/documentedit.html'
     }).state('documents.edit', {
       url: '/:id',
-      controller: 'DocumentEditCtrl',
+      controller: 'DocumentsEditCtrl',
       templateUrl: 'app/document/documentedit.html'
   });
 
