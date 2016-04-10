@@ -6,21 +6,25 @@
     border-bottom: none;
     background: #000 url("../assets/images/back.jpg");
     background-size: 100%;
+    background-position: 0px -100px;
     margin-top: -20px;
     height: 300px;
-    -webkit-animation: mymove 20s infinite; /* Chrome, Safari, Opera */
-        animation: mymove 20s infinite;
+//    -webkit-animation: mymove 20s infinite; /* Chrome, Safari, Opera */
+//        animation: mymove 20s infinite;
     }
 
-    /* Chrome, Safari, Opera */
-    @-webkit-keyframes mymove {
-        80% {background-position: 0px -200px;}
-    }
+/*    /* Chrome, Safari, Opera */
+//    @-webkit-keyframes mymove {
+//        80% {background-position: 0px -200px;}
+//    }
 
     /* Standard syntax */
-    @keyframes mymove {
-        80% {background-position: 0px -200px;}
-    }
+//    @keyframes mymove {
+//        80% {background-position: 0px -200px;}
+//    }
+
+
+
 #banner h1 {
     font-size: 48px;
     font-weight: 700;
