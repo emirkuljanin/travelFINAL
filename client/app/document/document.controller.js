@@ -12,8 +12,8 @@ angular.module('fullstackApp')
         $state.go('documents.new');
     };
 
-    $scope.editDocument = function(documentId) {
-        $state.go('documents.edit', {id: documentId});
+    $scope.editDocument = function(docId) {
+        $state.go('documents.edit', {id: docId});
     };
 
   });
