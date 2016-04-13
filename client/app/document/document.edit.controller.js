@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('DocumentsEditCtrl', function ($scope , DocumentsResource, $stateParams) {
+  .controller('DocumentsEditCtrl', function ($scope , $state, DocumentsResource, $stateParams) {
     $scope.message = 'Hello';
 
     if($stateParams.id){
@@ -11,9 +11,15 @@ angular.module('fullstackApp')
     }
 
     $scope.save = function(){
-        DocumentsResource.save($scope.document).$promise.then(function(response){
-            console.log(response);
-            $scope.document = response;
-        });
+      if($stateParams.id){
+          DocumentsResource.update({ id: $stateParams.id} , $scope.document).$promise.then(function(response){
+              $scope.document = response;
+          });
+      }else {
+          DocumentsResource.save( $scope.document).$promise.then(function(response){
+              $state.go('documents.edit' , { id: response._id} );
+              $scope.document = response;
+          });
       }
+    };
   });

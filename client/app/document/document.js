@@ -18,7 +18,7 @@ angular.module('fullstackApp')
         controller: 'DocumentsEditCtrl',
         templateUrl: 'app/document/documentedit.html'
     }).state('documents.edit', {
-      url: '/:id',
+      url: '/:id/edit',
       controller: 'DocumentsEditCtrl',
       templateUrl: 'app/document/documentedit.html'
   });
