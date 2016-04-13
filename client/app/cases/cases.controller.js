@@ -4,9 +4,11 @@ angular.module('fullstackApp')
   .controller('CasesCtrl', function ($scope , $location, $state , $stateParams, CasesResource) {
     $scope.message = 'Hello';
 
-    CasesResource.query().$promise.then(function (response) {
-        $scope.cases = response;
-    });
+    $scope.getCases = function functionName() {
+              CasesResource.query().$promise.then(function (response) {
+            $scope.cases = response;
+        });
+    };
 
     $scope.newCase = function(){
         $state.go('cases.new');
@@ -17,4 +19,12 @@ angular.module('fullstackApp')
             $state.go('cases.edit', {id: caseId});
         };
 
-      });
+    $scope.delete = function(caseId) {
+        CasesResource.delete({id : caseId}).$promise.then(function (){
+            $scope.getCases();
+        });
+    };
+
+    $scope.getCases();
+
+         });
