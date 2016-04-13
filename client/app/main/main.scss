@@ -5,8 +5,9 @@
 #banner {
     border-bottom: none;
     background: #000 url("http://s18.postimg.org/409fjkg3r/backr.jpg");
-    background-size: 100%;
-    background-position: 0px -100px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     margin-top: -20px;
     height: 300px;
 //    -webkit-animation: mymove 20s infinite; /* Chrome, Safari, Opera */
