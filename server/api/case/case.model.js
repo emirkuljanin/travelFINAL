@@ -10,7 +10,8 @@ var CaseSchema = new Schema({
   caseOwner: String,
   caseNumber: String,
   clientName: String,
-  active: Boolean
-});
+  active: Boolean,
+  documents: [ {type: mongoose.Schema.Types.ObjectId , ref: 'Document'} ]
+}, {autoIndex:true});
 
 module.exports = mongoose.model('Case', CaseSchema);
