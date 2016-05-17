@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('CasesCtrl', function ($scope , $location, $state , $stateParams, CasesResource) {
+  .controller('TravelsCtrl', function ($scope , $location, $state , $stateParams, TravelsResource) {
     $scope.message = 'Hello';
 
-    $scope.getCases = function functionName() {
-              CasesResource.query().$promise.then(function (response) {
-            $scope.cases = response;
+    $scope.getTravels = function functionName() {
+              TravelsResource.query().$promise.then(function (response) {
+            $scope.travels = response;
         });
     };
 
-    $scope.newCase = function(){
-        $state.go('cases.new');
+    $scope.newTravel = function(){
+        $state.go('travels.new');
     };
 
 
-        $scope.editCase = function(caseId){
-            $state.go('cases.edit', {id: caseId});
+        $scope.editTravel = function(travelId){
+            $state.go('travels.edit', {id: travelId});
         };
 
-    $scope.delete = function(caseId) {
-        CasesResource.delete({id : caseId}).$promise.then(function (){
-            $scope.getCases();
+    $scope.delete = function(travelId) {
+        TravelsResource.delete({id : travelId}).$promise.then(function (){
+            $scope.getTravels();
         });
     };
 
-    $scope.getCases();
+    $scope.getTravels();
 
          });

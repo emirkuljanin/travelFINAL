@@ -3,23 +3,23 @@
 angular.module('fullstackApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('cases', {
+      .state('travels', {
         url: '/travel',
         abstract: true,
         template: '<div ui-view></div>'
       })
-      .state('cases.list', {
+      .state('travels.list', {
         url: '',
-        controller: 'CasesCtrl',
+        controller: 'TravelsCtrl',
         templateUrl: 'app/travels/travels.html'
       })
-      .state('cases.new', {
+      .state('travels.new', {
         url: '/new',
-        controller: 'CasesEditCtrl',
+        controller: 'TravelsEditCtrl',
         templateUrl: 'app/travels/travelsEdit.html'
-      }).state('cases.edit', {
+      }).state('travels.edit', {
             url: '/:id/edit',
-            controller: 'CasesEditCtrl',
+            controller: 'TravelsEditCtrl',
             templateUrl: 'app/travels/travelsEdit.html'
         });
 

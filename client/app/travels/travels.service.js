@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-.factory('CasesResource', function ($resource) {
+.factory('TravelsResource', function ($resource) {
     return $resource('/api/travels/:id/', {
         id: '@id'
     },{

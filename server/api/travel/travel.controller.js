@@ -1,11 +1,11 @@
 'use strict';
 
 var _ = require('lodash');
-var Case = require('./travel.model');
+var Travel = require('./travel.model');
 
 // Get list of items
 exports.index = function(req, res) {
-  Case.find().populate('documents').exec( function (err, items) {
+  Travel.find().populate('documents').exec( function (err, items) {
     if(err) { return handleError(res, err); }
     return res.status(200).json(items);
   });
@@ -13,7 +13,7 @@ exports.index = function(req, res) {
 
 // Get a single item
 exports.show = function(req, res) {
-  Case.findById(req.params.id).populate('documents').exec( function (err, item) {
+  Travel.findById(req.params.id).populate('documents').exec( function (err, item) {
   if(err) { return handleError(res, err); }
   if(!item) { return res.status(404).send('Not Found'); }
   return res.json(item);
@@ -22,7 +22,7 @@ exports.show = function(req, res) {
 
 // Creates a new item in the DB.
 exports.create = function(req, res) {
-  Case.create(req.body, function(err, item) {
+  Travel.create(req.body, function(err, item) {
     if(err) { return handleError(res, err); }
     return res.status(201).json(item);
   });
@@ -31,7 +31,7 @@ exports.create = function(req, res) {
 // Updates an existing item in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  Case.findById(req.params.id, function (err, item) {
+  Travel.findById(req.params.id, function (err, item) {
     if (err) { return handleError(res, err); }
     if(!item) { return res.status(404).send('Not Found'); }
     var updated = _.merge(item, req.body);
@@ -44,7 +44,7 @@ exports.update = function(req, res) {
 
 // Deletes a item from the DB.
 exports.destroy = function(req, res) {
-  Case.findById(req.params.id, function (err, item) {
+  Travel.findById(req.params.id, function (err, item) {
     if(err) { return handleError(res, err); }
     if(!item) { return res.status(404).send('Not Found'); }
     item.remove(function(err) {
