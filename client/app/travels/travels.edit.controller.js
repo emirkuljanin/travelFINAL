@@ -23,13 +23,13 @@ angular.module('fullstackApp')
         }
       };
       /*      $scope.update = function() {
-              CasesResource.update({id: $scope.case._id, name: $scope.case.name, info: $scope.case.info,
-                 description: $scope.case.description, caseOwner: $scope.case.caseOwner,caseNumber: $scope.case.caseNumber,
-                 clientName: $scope.case.clientName, active: $scope.case.active, }, function() {
+              TravelsResource.update({id: $scope.travel._id, name: $scope.travel.name, info: $scope.travel.info,
+                 description: $scope.travel.description, travelOwner: $scope.travel.travelOwner,travelNumber: $scope.travel.travelNumber,
+                 clientName: $scope.travel.clientName, active: $scope.travel.active, }, function() {
             });
             };
             $scope.delete = function() {
-              CasesResource.remove({id: $scope.case._id}, function()
+              TravelResource.remove({id: $scope.travel._id}, function()
               {
               });
             };
