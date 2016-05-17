@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var Case = require('./case.model');
+var Case = require('./travel.model');
 
 // Get list of items
 exports.index = function(req, res) {

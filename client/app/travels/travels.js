@@ -11,16 +11,16 @@ angular.module('fullstackApp')
       .state('cases.list', {
         url: '',
         controller: 'CasesCtrl',
-        templateUrl: 'app/cases/cases.html'
+        templateUrl: 'app/travels/travels.html'
       })
       .state('cases.new', {
         url: '/new',
         controller: 'CasesEditCtrl',
-        templateUrl: 'app/cases/casesEdit.html'
+        templateUrl: 'app/travels/travelsEdit.html'
       }).state('cases.edit', {
             url: '/:id/edit',
             controller: 'CasesEditCtrl',
-            templateUrl: 'app/cases/casesEdit.html'
+            templateUrl: 'app/travels/travelsEdit.html'
         });
 
       });

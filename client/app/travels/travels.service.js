@@ -2,7 +2,7 @@
 
 angular.module('fullstackApp')
 .factory('CasesResource', function ($resource) {
-    return $resource('/api/cases/:id/', {
+    return $resource('/api/travels/:id/', {
         id: '@id'
     },{
         update: {
