@@ -11,6 +11,7 @@ angular.module('fullstackApp')
     }
 
     $scope.save = function(){
+      $scope.document.travel = $stateParams.travelId;
       if($stateParams.id){
           DocumentsResource.update({ id: $stateParams.id} , $scope.document).$promise.then(function(response){
               $scope.document = response;
