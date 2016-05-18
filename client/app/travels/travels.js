@@ -21,6 +21,11 @@ angular.module('fullstackApp')
             url: '/:id/edit',
             controller: 'TravelsEditCtrl',
             templateUrl: 'app/travels/travelsEdit.html'
-        });
+        })
+        .state('travels.addDoc', {
+        url: '/:travelId/add-document',
+        controller: 'DocumentEditCtrl',
+        templateUrl: 'app/document/documentedit.html'
+    });
 
       });

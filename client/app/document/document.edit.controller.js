@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('DocumentsEditCtrl', function ($scope , $state, DocumentsResource, $stateParams) {
+  .controller('DocumentsEditCtrl', function ($scope , DocumentsResource, $stateParams) {
     $scope.message = 'Hello';
 
     if($stateParams.id){
@@ -11,6 +11,7 @@ angular.module('fullstackApp')
     }
 
     $scope.save = function(){
+      $scope.document.travel = $stateParams.travelId;
       if($stateParams.id){
           DocumentsResource.update({ id: $stateParams.id} , $scope.document).$promise.then(function(response){
               $scope.document = response;
