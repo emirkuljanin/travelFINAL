@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('DocumentsEditCtrl', function ($scope , $state, DocumentsResource, $stateParams) {
+  .controller('DocumentsEditCtrl', function ($scope , DocumentsResource, $stateParams) {
     $scope.message = 'Hello';
 
     if($stateParams.id){

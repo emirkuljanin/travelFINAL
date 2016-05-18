@@ -28,4 +28,5 @@ angular.module('fullstackApp')
         templateUrl: 'app/document/documentedit.html'
      });
 
+
       });

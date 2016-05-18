@@ -12,7 +12,7 @@ angular.module('fullstackApp')
     }
 
     $scope.save = function(){
-      $scope.travel.documents = [{_id: '56f1dd3c9e2ec4c431f16dde'}, {_id: '56f1dbcef26343481b4adc96'}];
+      $scope.travel.documents = [{_id: '573b5349337540ac10de1b47'}];
         if($stateParams.id){
             TravelsResource.update({ id: $stateParams.id} , $scope.travel).$promise.then(function(response){
                 $scope.travel = response;
@@ -40,4 +40,4 @@ angular.module('fullstackApp')
             };
       */
 
-      });
+  });
